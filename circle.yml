@@ -1,7 +1,8 @@
 test:
   override:
-    post:
-      - mkdir -p $CIRCLE_TEST_REPORTS/junit/:
-          parallel: true
-      - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \:
-          parallel: true
+    - mvn clean package
+        parallel: true
+    - mkdir -p $CIRCLE_TEST_REPORTS/junit/:
+        parallel: true
+    - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \:
+        parallel: true
