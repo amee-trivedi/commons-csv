@@ -177,8 +177,8 @@ CSV files of various types.
         <configuration>
           <excludes>
             <exclude>**/perf/PerformanceTest.java</exclude>
-            <exclude>**/CSVFormatTest.java</exclude>
           </excludes>
+          <skip>true</skip>
         </configuration>
       </plugin>
       <plugin>
