@@ -190,6 +190,9 @@ CSV files of various types.
 						<include>**/When*.java</include>
 						<include>**/*TestSuite.java</include>
 					</includes>
+					<excludes>
+            					<exclude>**/CSVFormatTest.java</exclude>
+        				</excludes>
 				</configuration>
 			<executions>
 				<execution>
